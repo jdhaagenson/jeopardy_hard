@@ -1,0 +1,14 @@
+.Contact input {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Anonymous Pro", monospace;
+}
+
+.Contact {
+    font-family: Helvetica, sans-serif;
+}
