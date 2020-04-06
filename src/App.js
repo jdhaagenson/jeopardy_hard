@@ -6,10 +6,14 @@ import Contact from "./components/contact/Contact";
 import Navigation from "./components/Navigation";
 import NotFound from './NotFound';
 import Jeopardy from './components/jeopardy/Jeo';
+import './App.css';
+import AnswerForm from './components/jeopardy/AnswerForm';
+
 
 function App ()  {
     return (
       <div className="App">
+        <Navigation/>
         <Switch>
           <Route
             exact
@@ -20,7 +24,7 @@ function App ()  {
           <Route path="/jeopardy" component={Jeopardy}/>
           <Route path="*" component={NotFound}/>
         </Switch>
-        <Navigation/>
+
       </div>
     )
   }

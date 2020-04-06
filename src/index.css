@@ -47,9 +47,32 @@ button {
 
 .Navigation li {
   display: inline-block;
+  color: white;
 }
 
 .Navigation a {
   display: block;
   padding: 4px;
+  color: black;
+  margin: auto;
+}
+
+.Jeopardy h2 {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  color: black;
+  background-color: rgba(182, 31, 149, 0.404);
+}
+
+.clue {
+  padding: 10px;
+  font-family: 'Cantata One', serif;
+  display:flex;
+  flex-wrap: wrap;
+  width:30rem;
+  color: white;
+  font-size: 25px;
+  font-variant-caps: all-small-caps;
+  background-color: rgba(13, 161, 230, 0.973);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }

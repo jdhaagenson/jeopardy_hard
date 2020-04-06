@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AnswerForm from './AnswerForm';
 import JeopardyService from "../../jeopardyService";
 
 class Jeopardy extends Component{
@@ -24,11 +25,33 @@ class Jeopardy extends Component{
     componentDidMount(){
         this.getNewQuestion();
     }
+
+    checkAnswer = answer => {
+        if (answer.toUpperCase() === this.state.data.answer.toUpperCase()){
+            this.setState((state, props)=> ({
+                score:state.score + state.data.value
+            }));
+        } else {
+            this.setState((state, props)=> ({
+                score: state.score - state.data.value
+            }));
+        }
+        this.getNewQuestion();
+    }
     //display the results on the screen
     render() {
+        const category = this.state.data.category && this.state.data.category.title
         return (
-            <div>
-                {JSON.stringify(this.state.data)}
+            <div className="Jeopardy">
+                <h2>{category}</h2>
+                <h3>{this.state.data.value}</h3>
+                <div className="clue">
+                    {this.state.data.question}
+                </div>
+                <AnswerForm checkAnswer={this.checkAnswer}/>
+                <div className="score">
+                    Your winnings: ${this.state.score}
+                </div>
             </div>
         );
     }
