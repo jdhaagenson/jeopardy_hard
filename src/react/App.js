@@ -1,13 +1,13 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Welcome from './components/Welcome';
+import Welcome from './Welcome';
 import Clock from "./components/clock/Clock";
 import Contact from "./components/contact/Contact";
-import Navigation from "./components/Navigation";
+import Navigation from "./Navigation";
 import NotFound from './NotFound';
-import Jeopardy from './components/jeopardy/Jeo';
+import Jeopardy from './components/jeopardy/Jeopardy';
 import './App.css';
-import AnswerForm from './components/jeopardy/AnswerForm';
+// import AnswerForm from './components/jeopardy/AnswerForm';
 
 
 function App ()  {
