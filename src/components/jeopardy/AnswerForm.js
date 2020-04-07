@@ -8,6 +8,7 @@ class AnswerForm extends Component {
         }
     }
     handleChange = e => {
+        // e.preventDefault()
         this.setState({
             answer: e.target.value
         })
@@ -22,15 +23,17 @@ class AnswerForm extends Component {
     render() {
         return (
             <div className="AnswerForm">
-                <form onSubmit={}>
+                <form onSubmit={this.handleSubmit}>
                     <input
+                        className="answerbox"
                         type="text"
                         name="answer"
                         placeholder="Answer"
                         onChange={this.handleChange}
+                        value={this.state.answer}
                     />
                     <button
-                        onSubmit={}
+                        type="submit"
                     >Go</button>
                 </form>
             </div>
