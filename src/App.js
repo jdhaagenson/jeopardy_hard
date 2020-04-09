@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Welcome from './Welcome';
+import Welcome from './components/Welcome';
 import Clock from "./components/clock/Clock";
 import Contact from "./components/contact/Contact";
 import Navigation from "./Navigation";
